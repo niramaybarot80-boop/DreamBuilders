@@ -1,0 +1,459 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Niramay Barot - WFG Licensed Associate</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+  <style>
+    :root {
+      --primary-color: #0066cc;
+      --secondary-color: #f8f9fa;
+      --accent-color: #ff6b35;
+      --text-dark: #333;
+      --border-color: #e9ecef;
+    }
+    
+    .hero-section {
+      background: linear-gradient(135deg, var(--primary-color), #004c99);
+      color: white;
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      margin: 0 auto 2rem;
+      display: block;
+      object-fit: cover;
+    }
+    
+    .credentials {
+      background: var(--secondary-color);
+      padding: 2rem 0;
+      border-top: 3px solid var(--accent-color);
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .service-card {
+      background: white;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      color: var(--text-dark);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    }
+
+    .service-card ul {
+      color: #555;
+      line-height: 1.6;
+    }
+
+    .service-card li {
+      margin-bottom: 0.5rem;
+      color: #555;
+    }
+    
+    .contact-info {
+      background: var(--primary-color);
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .contact-item {
+      text-align: center;
+    }
+    
+    .contact-item h4 {
+      margin-bottom: 0.5rem;
+      color: var(--accent-color);
+    }
+    
+    .btn-primary {
+      background: var(--accent-color);
+      border: none;
+      padding: 12px 24px;
+      border-radius: 25px;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin: 0.5rem;
+      transition: background 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: #e55a2b;
+      color: white;
+    }
+    
+    .stats-section {
+      background: var(--secondary-color);
+      padding: 2rem 0;
+      text-align: center;
+    }
+    
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    
+    .stat-item {
+      text-align: center;
+    }
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: var(--primary-color);
+      display: block;
+    }
+    
+    .partners-section {
+      padding: 3rem 0;
+      text-align: center;
+    }
+    
+    .partners-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1rem;
+      margin: 2rem 0;
+      align-items: center;
+    }
+    
+    .social-icons {
+      margin: 1rem 0;
+    }
+    
+    .social-icons a {
+      margin: 0 0.5rem;
+      padding: 0.5rem;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: inline-block;
+      transition: background 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background: var(--accent-color);
+    }
+    
+    .testimonial {
+      background: white;
+      padding: 2rem;
+      border-left: 4px solid var(--accent-color);
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      color: var(--text-dark);
+    }
+
+    .testimonial p {
+      color: #555 !important;
+    }
+
+    .testimonial strong {
+      color: var(--primary-color) !important;
+    }
+    
+    .navbar {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    
+    .license-badge {
+      background: var(--accent-color);
+      color: white;
+      padding: 0.25rem 0.5rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      display: inline-block;
+    }
+    
+    .section-divider {
+      height: 3px;
+      background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+      border: none;
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar container-fluid">
+    <ul>
+      <li><strong>Niramay Barot</strong> <span class="license-badge">Licensed Associate</span></li>
+    </ul>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="https://calendly.com/niramaybarot/30min" class="btn-primary" target="_blank">Book Consultation</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-section">
+    <div class="container">
+      <img src="./attached_assets/image_1756658936213.png" alt="Niramay Barot" class="profile-image">
+      <h1>Niramay Barot</h1>
+      <h2>Licensed Financial Associate</h2>
+      <p style="font-size: 1.2rem; margin: 1rem 0;">License #24228212 • Ontario, Canada</p>
+      <p style="max-width: 600px; margin: 0 auto;">Helping families across North America achieve financial security through personalized insurance and investment solutions.</p>
+      <div style="margin-top: 2rem;">
+        <a href="https://calendly.com/niramaybarot/30min" class="btn-primary" target="_blank">Schedule Free Consultation</a>
+        <a href="mailto:niramaybarot80@gmail.com" class="btn-primary">Email Me</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="credentials">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-number">5+</span>
+          <p>Years Experience</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">500+</span>
+          <p>Families Served</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">$50M+</span>
+          <p>Coverage Placed</p>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">98%</span>
+          <p>Client Satisfaction</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container" id="about">
+    <section style="padding: 3rem 0; text-align: center;">
+      <h2>About Me</h2>
+      <hr class="section-divider">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <p style="font-size: 1.1rem; line-height: 1.8;">As a licensed financial professional with World Financial Group, I specialize in helping individuals and families across North America build comprehensive financial strategies. My approach is education-first, ensuring you understand every aspect of your financial plan.</p>
+        
+        <div class="testimonial">
+          <p style="color: #555; font-style: italic; margin-bottom: 1rem;">"Niramay provided exceptional guidance during our family's financial planning process. His expertise in insurance and investments gave us peace of mind knowing our future is secure."</p>
+          <strong style="color: var(--primary-color);">- Viraj Barot, Hamilton</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" style="padding: 3rem 0;">
+      <h2 style="text-align: center;">My Services</h2>
+      <hr class="section-divider">
+      
+      <div class="services-grid">
+        <div class="service-card">
+          <h3 style="color: var(--primary-color);">🛡️ Insurance Protection</h3>
+          <ul>
+            <li>Life Insurance (Term & Permanent)</li>
+            <li>Disability Insurance</li>
+            <li>Critical Illness Coverage</li>
+            <li>Health & Dental Plans</li>
+            <li>Super Visa Insurance</li>
+            <li>Visitor Insurance</li>
+            <li>Final Expense Insurance</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 style="color: var(--primary-color);">📈 Investment Services</h3>
+          <ul>
+            <li>RESP (Education Savings)</li>
+            <li>RRSP (Retirement Planning)</li>
+            <li>TFSA (Tax-Free Savings)</li>
+            <li>Non-Registered Investments</li>
+            <li>Mutual Funds</li>
+            <li>Corporate Pension Plans</li>
+            <li>Portfolio Management</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 style="color: var(--primary-color);">🏢 Business Solutions</h3>
+          <ul>
+            <li>Business Continuation Planning</li>
+            <li>Buy-Sell Arrangements</li>
+            <li>Key Person Insurance</li>
+            <li>Corporate Estate Planning</li>
+            <li>Business Tax Strategies</li>
+            <li>Group Benefits</li>
+            <li>Commercial Insurance Referrals</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 style="color: var(--primary-color);">⚖️ Estate Planning</h3>
+          <ul>
+            <li>Estate Preservation Strategies</li>
+            <li>Will & Testament Planning</li>
+            <li>Power of Attorney Setup</li>
+            <li>Healthcare Directives</li>
+            <li>Succession Planning</li>
+            <li>Tax Minimization Strategies</li>
+            <li>Trust Planning</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 style="color: var(--primary-color);">🤝 Referral Services</h3>
+          <ul>
+            <li>Mortgage Services</li>
+            <li>Collateral Loans</li>
+            <li>Auto Insurance</li>
+            <li>Home Insurance</li>
+            <li>Commercial Insurance</li>
+            <li>Pet Insurance</li>
+            <li>Travel Insurance</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <h3 style="color: var(--primary-color);">🎓 Financial Education</h3>
+          <ul>
+            <li>Personal Financial Planning</li>
+            <li>Retirement Planning Workshops</li>
+            <li>Investment Education</li>
+            <li>Insurance Needs Analysis</li>
+            <li>Tax Planning Strategies</li>
+            <li>Debt Management</li>
+            <li>Financial Goal Setting</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners-section">
+      <h2>Trusted Partners</h2>
+      <hr class="section-divider">
+      <p>I work with Canada's leading financial institutions to provide you with the best products and rates:</p>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 2rem 0; text-align: center;">
+        <div>RBC Insurance</div>
+        <div>Manulife Financial</div>
+        <div>iA Financial Group</div>
+        <div>Equitable Life</div>
+        <div>TD Asset Management</div>
+        <div>BMO Financial</div>
+        <div>CIBC</div>
+        <div>AGF Investments</div>
+        <div>Fidelity Investments</div>
+        <div>SSQ Financial</div>
+        <div>Empire Life</div>
+        <div>Foresters Financial</div>
+        <div>Franklin Templeton</div>
+        <div>Mackenzie Investments</div>
+        <div>Invesco Canada</div>
+        <div>AON Insurance</div>
+      </div>
+    </section>
+  </main>
+
+  <section class="contact-info" id="contact">
+    <div class="container">
+      <h2>Let's Connect</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 2rem;">Ready to secure your financial future? I'm here to help you every step of the way.</p>
+      
+      <div class="contact-grid">
+        <div class="contact-item">
+          <h4>📞 Phone Consultation</h4>
+          <p>Schedule a free 30-minute consultation to discuss your financial goals</p>
+          <a href="https://calendly.com/niramaybarot/30min" class="btn-primary" target="_blank">Book Now</a>
+        </div>
+        
+        <div class="contact-item">
+          <h4>✉️ Email Me</h4>
+          <p>Have questions? Send me an email and I'll respond within 24 hours</p>
+          <a href="mailto:niramaybarot80@gmail.com" class="btn-primary">Send Email</a>
+        </div>
+        
+        <div class="contact-item">
+          <h4>🏢 License Information</h4>
+          <p>Licensed in Ontario, Canada<br>License #24228212</p>
+          <p style="font-size: 0.9rem;">Serving clients across USA & Canada</p>
+        </div>
+      </div>
+
+      <div class="social-icons">
+        <h4 style="color: white; margin-bottom: 1rem;">Follow Me</h4>
+        <a href="https://www.linkedin.com/company/world-financial-group-wfg" target="_blank" style="color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 25px; display: inline-block;">LinkedIn</a>
+        <a href="https://www.instagram.com/wfgcanada/?hl=en" target="_blank" style="color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 25px; display: inline-block;">Instagram</a>
+        <a href="https://www.facebook.com/WFGCanadaHQ/" target="_blank" style="color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 25px; display: inline-block;">Facebook</a>
+        <a href="https://x.com/wfgcanada" target="_blank" style="color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 25px; display: inline-block;">Twitter</a>
+        <a href="https://www.youtube.com/c/worldfinancialgroup" target="_blank" style="color: white; text-decoration: none; margin: 0 1rem; padding: 0.5rem 1rem; background: rgba(255,255,255,0.2); border-radius: 25px; display: inline-block;">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="Newsletter">
+    <div class="container" style="padding: 3rem 0; text-align: center;">
+      <article style="background: var(--secondary-color); padding: 3rem; border-radius: 15px;">
+        <h2>Stay Informed</h2>
+        <h3>Get exclusive financial tips and market updates</h3>
+        <form class="grid" style="max-width: 600px; margin: 0 auto;">
+          <input type="text" placeholder="Your first name" required>
+          <input type="email" placeholder="Your email address" required>
+          <button type="submit" class="btn-primary" onclick="event.preventDefault(); alert('Thank you for subscribing! I will be in touch soon.');">Subscribe to Newsletter</button>
+        </form>
+        <p style="font-size: 0.9rem; margin-top: 1rem; color: #666;">No spam, unsubscribe anytime. Your privacy is important to me.</p>
+      </article>
+    </div>
+  </section>
+
+  <footer style="background: var(--text-dark); color: white; padding: 2rem 0; text-align: center;">
+    <div class="container">
+      <p style="margin-bottom: 1rem;"><strong>Niramay Barot</strong> - Licensed Financial Associate</p>
+      <p style="font-size: 0.9rem; margin-bottom: 1rem;">License #24228212 | Ontario, Canada | Serving North America</p>
+      
+      <div style="margin: 1rem 0;">
+        <a href="mailto:niramaybarot80@gmail.com" style="color: white; margin: 0 1rem;">Email</a>
+        <a href="https://calendly.com/niramaybarot/30min" target="_blank" style="color: white; margin: 0 1rem;">Book Consultation</a>
+      </div>
+      
+      <small style="display: block; margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #555;">
+        © 2024 Niramay Barot. All rights reserved. | 
+        <a href="https://www.linkedin.com/company/world-financial-group-wfg" target="_blank" style="color: #ccc;">LinkedIn</a> •
+        <a href="https://www.instagram.com/wfgcanada/?hl=en" target="_blank" style="color: #ccc;">Instagram</a> •
+        <a href="https://www.facebook.com/WFGCanadaHQ/" target="_blank" style="color: #ccc;">Facebook</a> •
+        <a href="https://x.com/wfgcanada" target="_blank" style="color: #ccc;">Twitter</a> •
+        <a href="https://www.youtube.com/c/worldfinancialgroup" target="_blank" style="color: #ccc;">YouTube</a>
+      </small>
+    </div>
+  </footer>
+
+</body>
+</html>
